@@ -1,0 +1,19 @@
+@import "src/styles/_variables";
+@import "src/styles/_mixins";
+
+$topBarBgColor : #202020;
+
+.topBar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 10px;
+    min-height: 50px;
+    background-color: $topBarBgColor;
+
+    @include mq('tablet') {
+        min-height: 90px;
+    }
+}

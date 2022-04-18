@@ -1,0 +1,23 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.logo {
+  @include flex-center();
+
+  &__icon {
+    height: 23.43px;
+
+    @include mq('tablet') {
+      height: 32.81px;
+    }
+  }
+
+  &__text {
+    display: none;
+    margin-left: 15px;
+
+    @include mq('tablet') {
+      display: block;
+    }
+  }
+}

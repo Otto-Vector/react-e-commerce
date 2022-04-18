@@ -1,0 +1,44 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+
+.burger {
+  @include flex-center('row');
+  @include size(35px);
+  border-radius: 50%;
+  background-color: #292929;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
+
+  &__plate {
+    @include size(17.5px, 1.25px);
+    border-radius: 1px;
+    background-color: white;
+    box-shadow: 0 3.75px white, 0 -3.75px white;
+  }
+}
+
+.nav {
+  @include flex-center();
+  //flex-wrap: nowrap;
+
+  &__burger {
+    @include mq('tablet') {
+      display: none;
+    }
+  }
+  &__item {
+    display: none;
+    font-family: $Montserrat;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+    margin: 0 15px;
+    white-space: nowrap;
+
+    @include mq('tablet') {
+      display: inline;
+    }
+  }
+}

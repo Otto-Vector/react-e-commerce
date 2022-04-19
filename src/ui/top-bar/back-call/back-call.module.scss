@@ -27,7 +27,7 @@ $bcColor: $orangeColor;
     line-height: 23px;
 
   }
-    @include mq('tablet') {
+    @include mq('tablet-wide') {
       display: flex;
     }
 }

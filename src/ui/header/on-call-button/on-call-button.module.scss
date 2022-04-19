@@ -2,12 +2,27 @@
 @import "../../../styles/mixins";
 
 .onCallButton {
-  @include size(280px, 50px);
-  background-image: url('./media/arrow.svg'), linear-gradient($orangeColor, $orangeColor),;
-  background-repeat: no-repeat;
-  background-position: center right, center;
-  padding: 15px;
-  text-align: left;
+  display: flex;
+  flex-flow: nowrap column;
+
+  @include mq('desktop') {
+    flex-direction: column-reverse;
+  }
+
+  &__button {
+    @include size(280px, 50px);
+    background-image: url('./media/arrow.svg'), linear-gradient($orangeColor, $orangeColor),;
+    background-repeat: no-repeat;
+    background-position: center right, center;
+    background-size: auto 100%, auto;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+
+    @include mq('desktop') {
+      @include size(329px, 65px);
+    }
+  }
 
   &__text {
     color: #fff;
@@ -19,6 +34,31 @@
 
     &:after {
       content: 'Заказать звонок';
+      @include mq('tablet-wide') {
+        content: 'Выйти на связь';
+      }
+    }
+  }
+
+  &__description {
+    margin-top: 11px;
+    color: white;
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    font-variant: small-caps;
+    opacity: .5;
+
+    @include mq('desktop') {
+      margin: 0 0 15px 0;
+      text-align: left;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 600;
+      opacity: 1;
     }
   }
 }

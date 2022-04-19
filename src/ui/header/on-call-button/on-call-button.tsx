@@ -5,9 +5,11 @@ type OwnProps = {}
 
 export const OnCallButton: React.FC<OwnProps> = () => {
 
-    return (
-        <button className={styles.onCallButton}>
+    return (<div className={styles.onCallButton}>
+        <button className={styles.onCallButton__button}>
             <span className={styles.onCallButton__text}></span>
         </button>
+            <div className={styles.onCallButton__description}>{'Ответим на любой вопрос'}</div>
+        </div>
     );
 }

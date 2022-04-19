@@ -21,8 +21,6 @@
     font-weight: 700;
     line-height: 15px;
 
-
-
     @include mq('desktop') {
       background-size: 18.89px;
       font-size: 22.6667px;
@@ -52,7 +50,7 @@
     color: #FFFFFF;
 
     @include mq('desktop') {
-      display: inline;
+      display: block;
       margin-top: 30px;
     }
   }

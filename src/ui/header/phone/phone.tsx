@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './phone.module.scss';
-import phoneImg from './media/phone.png'
-import eImg from './media/E.png'
+import phoneImg from '../media/phone.png'
+import eImg from '../media/E.png'
 
 type OwnProps = {}
 

@@ -17,28 +17,43 @@
   }
 }
 
-.nav {
+.navbar {
+  position: relative;
   @include flex-center();
-  //flex-wrap: nowrap;
+  background-color: inherit;
 
   &__burger {
-    @include mq('tablet') {
+    @include mq('desktop') {
       display: none;
     }
   }
-  &__item {
+  &__nav {
+    position: absolute;
     display: none;
+    flex-flow: column nowrap;
+    top: 45px;
+    right: -10px;
+    //background-color: #292929;
+    background-color: inherit;
+
+    &_active {
+      display: flex;
+    }
+
+    @include mq('desktop') {
+      display: flex;
+      position: static;
+      flex-flow: row nowrap;
+    }
+  }
+  &__item {
     font-family: $Montserrat;
     font-weight: 600;
     font-style: normal;
     font-size: 14px;
     line-height: 17px;
     color: white;
-    margin: 0 15px;
+    margin: 7px 15px;
     white-space: nowrap;
-
-    @include mq('tablet') {
-      display: inline;
-    }
   }
 }

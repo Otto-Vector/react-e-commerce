@@ -1,19 +1,21 @@
 @import "src/styles/_variables";
 @import "src/styles/_mixins";
 
-$topBarBgColor : #202020;
+$topBarBgColor: #202020;
 
 .topBar {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+  white-space: nowrap;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
 
-    padding: 0 10px;
-    min-height: 50px;
-    background-color: $topBarBgColor;
+  padding: 0 10px;
+  min-height: 50px;
+  background-color: $topBarBgColor;
 
-    @include mq('tablet') {
-        min-height: 90px;
-    }
+  @include mq('tablet') {
+    min-height: 90px;
+    justify-content: space-around;
+  }
 }

@@ -1,0 +1,33 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+$bcColor: #FF834E;
+
+.backCall {
+  @include flex-center();
+  display: none;
+  background-color: inherit;
+  font-family: $SourceSansPro;
+  font-weight: 300;
+
+  &__button {
+    background-color: inherit;
+    border: 1px solid $bcColor;
+    padding: 13px 26px;
+    font-size: 16px;
+    color: $bcColor;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  &__phone {
+    margin-left: 30px;
+    color: white;
+    font-size: 18px;
+    line-height: 23px;
+
+  }
+    @include mq('tablet') {
+      display: flex;
+    }
+}

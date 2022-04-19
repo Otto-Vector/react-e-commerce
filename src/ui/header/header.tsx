@@ -1,13 +1,22 @@
 import React from 'react';
 import styles from './header.module.scss';
-import {TopBar} from "./top-bar/top-bar";
+import {Ecommerce} from './ecommerce/ecommerce';
+import {Phone} from './phone/phone';
+import {OnCallButton} from './on-call-button/on-call-button';
 
 type OwnProps = {}
 
 export const Header: React.FC<OwnProps> = () => {
     return (
-        <div className={styles.header}>
-            <TopBar/>
-        </div>
+        <section className={styles.header}>
+            <Ecommerce/>
+            <div className={styles.header__phone}>
+                <Phone/>
+            </div>
+            <div className={styles.header__onCallButton}>
+                <OnCallButton/>
+            </div>
+            <p className={styles.header__description}>{'Ответим на любой вопрос'}</p>
+        </section>
     );
 }

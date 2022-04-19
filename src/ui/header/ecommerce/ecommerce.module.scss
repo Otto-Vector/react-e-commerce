@@ -1,0 +1,59 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.ecommerce {
+  font-family: $Montserrat;
+  font-style: normal;
+  margin: 0 auto;
+
+
+  &__header {
+    background-image: url("../media/basket.svg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 10.46px;
+
+    padding-left: 17.17px;
+    margin-bottom: 9.48px;
+
+    color: $orangeColor;
+    font-size: 12.5492px;
+    font-weight: 700;
+    line-height: 15px;
+
+
+
+    @include mq('desktop') {
+      background-size: 18.89px;
+      font-size: 22.6667px;
+      line-height: 28px;
+      margin-bottom: 20px;
+      padding-left: 31px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20.7996px;
+    line-height: 28px;
+    color: #FFFFFF;
+
+    @include mq('desktop') {
+      font-size: 52px;
+      line-height: 70px;
+    }
+  }
+
+  &__description {
+    display: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+
+    @include mq('desktop') {
+      display: inline;
+      margin-top: 30px;
+    }
+  }
+}

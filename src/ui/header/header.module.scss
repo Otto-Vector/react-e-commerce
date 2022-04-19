@@ -1,3 +1,41 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+
 .header {
 
+  width: 100%;
+  //height: 526px;
+  background-image: radial-gradient(105.09% 130.3% at 52.97% 67.41%, rgba(22, 22, 22, 0) 0%, #161616 100%),
+  url('./media/code_fade.png'),
+  url('./media/blume_bg.png'),
+  linear-gradient(#171718, #171718);
+  background-size: cover, 30%, cover, cover;
+  background-position: center, left bottom, center, center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  padding: 30px 20px 25px;
+
+  &__phone {
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+
+  &__onCallButton {
+    @include flex-center()
+  }
+
+  &__description {
+    margin-top: 11px;
+    color: white;
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+
+    font-variant: small-caps;
+    opacity: .5;
+  }
 }

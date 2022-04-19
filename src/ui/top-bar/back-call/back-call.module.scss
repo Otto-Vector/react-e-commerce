@@ -1,7 +1,7 @@
-@import "src/styles/variables";
-@import "src/styles/mixins";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
 
-$bcColor: #FF834E;
+$bcColor: $orangeColor;
 
 .backCall {
   @include flex-center();

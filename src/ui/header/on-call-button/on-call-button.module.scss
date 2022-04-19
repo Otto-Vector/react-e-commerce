@@ -1,0 +1,24 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.onCallButton {
+  @include size(280px, 50px);
+  background-image: url('./media/arrow.svg'), linear-gradient($orangeColor, $orangeColor),;
+  background-repeat: no-repeat;
+  background-position: center right, center;
+  padding: 15px;
+  text-align: left;
+
+  &__text {
+    color: #fff;
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:after {
+      content: 'Заказать звонок';
+    }
+  }
+}

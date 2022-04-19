@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './logo.module.scss';
-import logoIcon from './../../../../media/svg/logo.svg'
-import logoText from './../../../../media/WEB ALTERNATIVE.png'
+import logoIcon from './media/logo.svg'
+import logoText from './media/WEB ALTERNATIVE.png'
 type OwnProps = {}
 
 export const Logo: React.FC<OwnProps> = () => {

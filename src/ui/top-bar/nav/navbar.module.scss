@@ -1,5 +1,5 @@
-@import "src/styles/mixins";
-@import "src/styles/variables";
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
 
 
 .burger {
@@ -29,6 +29,7 @@
   }
   &__nav {
     position: absolute;
+    z-index: 999;
     display: none;
     flex-flow: column nowrap;
     top: 45px;
